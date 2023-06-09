@@ -1,5 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Button, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
-
+import { memo } from "react";
 interface INewsCardProps {
   title: string;
   description: string;
@@ -85,4 +86,4 @@ const NewsCard = (props: INewsCardProps) => {
   );
 };
 
-export default NewsCard;
+export default memo(NewsCard);

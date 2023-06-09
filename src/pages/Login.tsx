@@ -9,7 +9,6 @@ import {
   Link,
   Button,
   Heading,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
@@ -20,8 +19,8 @@ const Login = () => {
   const navigate = useNavigate();
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
-  console.log(localStorage.getItem("user"));
-  const loginValidation = (e: any) => {
+  // console.log(localStorage.getItem("user"));
+  const loginValidation = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     const currentUser = localStorage.getItem("user");
     if (currentUser) {

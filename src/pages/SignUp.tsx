@@ -15,7 +15,6 @@ import {
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { max } from "../../node_modules/@popperjs/core/lib/utils/math";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -25,9 +24,19 @@ const SignUp = () => {
     password: "",
     token: false,
   });
-  const HundleSignUp = () => {
-    localStorage.setItem("user", JSON.stringify(user));
-    navigate("/");
+
+  const HundleSignUp = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    if (user.username === "" || user.email === "" || user.password === "") {
+      alert("Please fill all the fields");
+    } else if (user.password.length < 4) {
+      alert("Password must be at least 4 characters");
+    } else if (!user.email.includes("@") || !user.email.includes(".")) {
+      alert("Please enter a valid email address");
+    } else {
+      localStorage.setItem("user", JSON.stringify(user));
+      navigate("/login");
+    }
   };
   useEffect(() => {
     const data = localStorage.getItem("user");

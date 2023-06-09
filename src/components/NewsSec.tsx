@@ -10,7 +10,7 @@ const NewsSec = () => {
   if (data) {
     const user = data ? JSON.parse(data) : null;
     token = user.token;
-    console.log(token);
+    // console.log(token);
   } else {
     token = false;
   }
@@ -66,9 +66,9 @@ const NewsSec = () => {
           alignItems={"center"}
         >
           {isLoading && <div>Loading...</div>}{" "}
-          {news.map((item: Iitem) => {
+          {news.map((item: Iitem, id) => {
             return (
-              <Box mt={"20px"}>
+              <Box mt={"20px"} key={id}>
                 <NewsCard
                   title={item.headline}
                   description={item.description}

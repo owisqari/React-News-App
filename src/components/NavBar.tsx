@@ -9,11 +9,9 @@ import {
   useColorMode,
   Button,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
   let token;
@@ -21,7 +19,7 @@ const NavBar = () => {
   if (data) {
     const user = data ? JSON.parse(data) : null;
     token = user.token;
-    console.log(token);
+    // console.log(token);
   } else {
     token = false;
   }
@@ -51,7 +49,7 @@ const NavBar = () => {
                 alt="blog logo"
               />
             </Box>
-            <Text fontSize="lg" fontWeight="bold">
+            <Text fontSize="lg" fontWeight="bold" as={"a"} href="/">
               NewsBreak
             </Text>
           </HStack>
@@ -60,7 +58,6 @@ const NavBar = () => {
               <Button
                 onClick={() => {
                   localStorage.removeItem("user");
-                  setIsLogin(false);
                   navigate("/");
                 }}
               >
