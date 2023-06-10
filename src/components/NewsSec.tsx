@@ -101,7 +101,7 @@ const NewsSec = () => {
           alignItems={"center"}
         >
           {/* searc bar */}
-          <InputGroup borderRadius={5} w={"68rem"} size="sm">
+          <InputGroup borderRadius={5} w={"68rem"} size="lg">
             <InputLeftElement
               pointerEvents="none"
               children={<Search2Icon color="blue.400" />}
@@ -110,13 +110,15 @@ const NewsSec = () => {
               type="text"
               placeholder="Search..."
               borderRadius={"10px"}
+              fontSize={"lg"}
+              color={"white"}
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               onChange={(e: any) => handleSearch(e.target.value)}
               value={search}
             />
             <InputRightAddon p={0} border="none">
               <Button
-                size="sm"
+                size="lg"
                 borderLeftRadius={0}
                 borderRightRadius={"10px"}
                 bg={"blue.400"}
