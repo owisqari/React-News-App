@@ -18,8 +18,11 @@ const NewsSec = () => {
   const [search, setSearch] = useState("");
   let token;
   const data = localStorage.getItem("user");
+
   if (data) {
-    const user = data ? JSON.parse(data) : null;
+    const user = JSON.parse(data);
+    console.log(user);
+
     token = user.token;
     // console.log(token);
   } else {
