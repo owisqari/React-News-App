@@ -111,7 +111,6 @@ const NewsSec = () => {
               placeholder="Search..."
               borderRadius={"10px"}
               fontSize={"lg"}
-              color={"white"}
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               onChange={(e: any) => handleSearch(e.target.value)}
               value={search}
