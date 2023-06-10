@@ -2,7 +2,6 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   Stack,
   Text,
   useColorModeValue,
@@ -12,7 +11,7 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 
-const Logo = (props: any) => {
+const Logo = () => {
   return (
     <Image
       boxSize="50px"
