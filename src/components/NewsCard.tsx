@@ -13,7 +13,7 @@ interface INewsCardProps {
 const NewsCard = (props: INewsCardProps) => {
   return (
     <>
-      <Stack h={"25vh"} mt={"20"} direction={{ base: "column", md: "row" }}>
+      <Stack h={"25vh"} mt={"10rem"} direction={{ base: "column", md: "row" }}>
         <Flex
           direction={{ base: "column", md: "column", sm: "column" }}
           p={8}
