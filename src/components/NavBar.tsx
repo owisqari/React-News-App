@@ -23,7 +23,9 @@ const NavBar = () => {
   } else {
     token = false;
   }
-
+  const refreshPage = () => {
+    window.location.reload();
+  };
   // localStorage.removeItem("user");
   const { colorMode, toggleColorMode } = useColorMode();
   return (
@@ -58,7 +60,7 @@ const NavBar = () => {
               <Button
                 onClick={() => {
                   localStorage.removeItem("user");
-                  navigate("/");
+                  refreshPage();
                 }}
               >
                 Logout

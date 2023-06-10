@@ -32,19 +32,7 @@ const NewsCard = (props: INewsCardProps) => {
               >
                 {props.tag}
               </Text>
-              <Text
-                as={"span"}
-                position={"relative"}
-                fontSize={"20px"}
-                _after={{
-                  content: "''",
-                  width: "full",
-                  position: "absolute",
-                  bottom: 1,
-                  left: 0,
-                  zIndex: -1,
-                }}
-              >
+              <Text as={"span"} fontSize={"20px"}>
                 {props.title}
               </Text>
               <br />{" "}

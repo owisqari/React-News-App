@@ -58,7 +58,7 @@ const Login = () => {
           >
             <Stack spacing={4}>
               <FormControl id="email">
-                <FormLabel>Email address</FormLabel>
+                <FormLabel>Username</FormLabel>
                 <Input
                   type="text"
                   onChange={(e) => {
